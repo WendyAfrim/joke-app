@@ -34,10 +34,6 @@ workflows:
 
       - docker/publish:
           image: wendyafrim/joke-app:latest
-          docker-username: wendyafrim
-          docker-password: DOCKER_PASSWORD
-          requires:
-            - node/run
             - node/test
           filters:
             branches:
